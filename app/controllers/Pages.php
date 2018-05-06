@@ -6,7 +6,7 @@
 
 		public function index(){
 			$data = [
-				'title'=>'PHRAMEWORK'
+				'title'=>'Shareposts'
 			];
 			$this->view('pages/index', $data);
 		}
