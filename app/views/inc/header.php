@@ -10,5 +10,4 @@
 </head>
 <body>
 	<div class="container">
-		<button class="btn btn-primary">tEST</button>
-	</div>
+	
