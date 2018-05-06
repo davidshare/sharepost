@@ -13,5 +13,8 @@
 	//site name
 	define('SITENAME', 'SHAREPOST');
 
+	//APP VERSION
+	define('APPVERSION', '1.0.0');
+
 
 ?>
