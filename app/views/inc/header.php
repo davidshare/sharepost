@@ -9,5 +9,7 @@
 	<title><?php echo SITENAME ?></title>
 </head>
 <body>
+	<?php require_once 'navbar.php' ?>
 	<div class="container">
+
 	
