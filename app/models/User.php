@@ -6,6 +6,22 @@
             $this->db = new Database();
         }
 
+        //Register user
+        public function register($data){
+            $this->db->query('INSERT INTO users (name, email, password) VALUES(:name, :email, :password)');
+            $this->db->bind(':name', $data['name']);
+            $this->db->bind(':email', $data['email']);
+            $this->db->bind(':password', $data['password']);
+
+            //Execute
+            if($this->db->execute()){
+                return true;
+            }else{
+                return false;
+            }
+
+        }
+
         //Find user by email
         public function findUserByEmail($email){
             $this->db->query('Select * From users WHERE email = :email');
