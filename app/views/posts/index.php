@@ -7,7 +7,7 @@
         </div>
         <div class="col-md-6">
             <a href="<?php echo URLROOT; ?>/posts/add" class="btn btn-primary ml-auto">
-                <i class="fas fa-pencil">Add Post</i>
+                <i class="fas fa-pencil-alt">Add Post</i>
             </a>
         </div>
     </div>
