@@ -5,6 +5,9 @@
 		}
 
 		public function index(){
+			if(isLoggedIn()){
+				redirect('posts');
+			}
 			$data = [
 				'title'=>'Shareposts',
 				'description'=> 'Simple social network build on Phramework a simple PHP framework.'
