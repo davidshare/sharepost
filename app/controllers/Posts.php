@@ -16,5 +16,14 @@
                     ];
             $this->view('posts/index', $data);
         }
+
+        public function add(){
+            $data = [
+                'title' => '',
+                'body' => ''
+            ];
+
+            $this->view('posts/add', $data);
+        }
     }
 ?>

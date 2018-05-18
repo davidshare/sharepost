@@ -21,14 +21,5 @@
             return $result;
         }
 
-        public function add(){
-            $data = [
-                'title' => '',
-                'body' => ''
-            ];
-
-            $this->view('posts/add', $data);
-        }
-
     }
 ?>
