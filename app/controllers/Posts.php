@@ -4,7 +4,7 @@
         
         public function index(){
             $data = [];
-            $this->view('post/index', $data);
+            $this->view('posts/index', $data);
         }
     }
 ?>
