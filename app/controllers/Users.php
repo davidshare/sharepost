@@ -171,9 +171,5 @@
 			session_destroy();
 			redirect('users/login');
 		}
-
-		public function isLoggedIn(){
-			return isset($_SESSION['user_id']) ? true : false;
-		}
 	}
 ?>
