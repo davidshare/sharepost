@@ -9,7 +9,7 @@
 				<form action="<?php echo URLROOT; ?>/posts/add" method="post">
 					<div class="form-group">
 						<label for="title">Title: <sup>*</sup></label>
-						<input type="text" name="title" class="form-control form-control-lg <?php echo (!empty($data['title+_err'])) ? 'is-invalid' : ''; ?>" value="<?php echo $data['title']; ?>">
+						<input type="text" name="title" class="form-control form-control-lg <?php echo (!empty($data['title_err'])) ? 'is-invalid' : ''; ?>" value="<?php echo $data['title']; ?>">
 						<span class="invalid-feedback"><?php echo $data['title_err']; ?></span>
 					</div>
 
