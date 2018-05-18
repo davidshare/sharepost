@@ -1,7 +1,7 @@
 <?php
     class Posts extends Controller{
         public function __construct(){
-            if(!isset($_SESSION['user_id'])){
+            if(!isLoggedIn()){
                 redirect('users/login');
             }
         }
