@@ -12,7 +12,7 @@
             //Get posts
             $posts = $this->postModel->getPosts();
             $data = [
-                        'posts'=>$posts;
+                        'posts'=>$posts
                     ];
             $this->view('posts/index', $data);
         }
