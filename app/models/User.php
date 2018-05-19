@@ -37,6 +37,18 @@
             }
         }
 
+        //Find user by id
+        public function getUserById($id){
+            $this->db->query('Select * From users WHERE id = :id');
+
+            //bind value
+            $this->db->bind(':id', $id);
+
+            $row = $this->db->singleResult();
+
+            return $row;
+        }
+
         public function login($email, $password){
             $this->db->query('SELECT * FROM users WHERE email =:email');
             $this->db->bind(':email', $email);
