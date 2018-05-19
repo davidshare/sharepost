@@ -15,6 +15,9 @@
 				</li>
 			</ul>
 			<ul class="navbar-nav ml-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="#">Welcome <?php if(isset($_SESSION['user_name'])) echo $_SESSION['user_name']; ?></a>
+				</li>
 				<?php if(!isset($_SESSION['user_id'])){ ?>
 				<li class="nav-item">
 					<a class="nav-link" href="<?php echo URLROOT; ?>/users/register">Register</a>
