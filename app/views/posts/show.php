@@ -9,7 +9,10 @@
         Written by <?php echo $data['user']->name.' on '.$data['post']->created_at; ?>
     </div>
     <p><?php echo $data['post']->body; ?> </p>
-    
+    <?php if($data['post']->user_id == $_SESSION['user_id']): ?>
+        <hr>
+        <a href="<?php echo URLROOT.'/posts/edit/'.$data['post']->id; ?>" class="btn btn-dark">Edit</a>
+    <?php endif; ?>
     
 
 <?php require APPROOT.'/views/inc/footer.php'; ?>
