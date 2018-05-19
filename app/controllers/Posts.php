@@ -68,6 +68,7 @@
                 //sanitize POST array
                 $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
                 $data = [
+                    'id' => $id,
                     'title' => trim($_POST['title']),
                     'body' => trim($_POST['body']),
                     'user_id' => $_SESSION['user_id'],
@@ -87,14 +88,14 @@
                 //Make sure no errors&
                 if(empty($data['title_err']) && empty($data['body_err'])){
                     //Validated
-                    if($this->postModel->addPost($data)){
-                        flash('post_message', 'Post Added');
+                    if($this->postModel->updatePost($data)){
+                        flash('post_message', 'Post updated');
                         redirect('posts');
                     }else{
                         die('Something went wrong');
                     }
                 }else{
-                    $this->view('posts/add', $data);
+                    $this->view('posts/edit', $data);
                 }
 
             }else{
