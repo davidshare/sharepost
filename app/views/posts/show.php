@@ -13,6 +13,8 @@
         <hr>
         <a href="<?php echo URLROOT.'/posts/edit/'.$data['post']->id; ?>" class="btn btn-dark">Edit</a>
     <?php endif; ?>
-    
+    <form class="float-right" action="<?php echo URLROOT.'/posts/delete/'.$data['post']->id;?>" method="post">
+        <input type="submit" value="Delete" class="btn btn-danger"
+    </form>
 
 <?php require APPROOT.'/views/inc/footer.php'; ?>
